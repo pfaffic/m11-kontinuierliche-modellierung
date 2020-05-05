@@ -24,7 +24,7 @@
 ## Created: 2020-05-05
 
 function wert=Quellfunktion(x,y)
-  if sqrt((x.-1.0).^2+(y.-1).^2)<=0.05 wert=1;
+  if sqrt((x.-1.0).^2+(y.-1).^2)<=0.15 wert=1;
     else wert=0;
   endif
 endfunction
