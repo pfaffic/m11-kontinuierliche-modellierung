@@ -83,12 +83,15 @@ for t=0.01:0.005:0.15 %da jetzt Funktion zeitabhängig ist braucht Zeitschleife
       ystar=y(j,i)*ones(length(Y),length(X));
       % Psi mit verschobenem Argument:
       psi=(1/(4*pi*a*t))*exp(-((xstar.-x).^2+(ystar.-y).^2)/(4*a*t)); #-log(sqrt((xstar.-x).^2+(ystar.-y).^2))/(2*pi); %Fundamentallösung der Poissongleichung,die jetzt zeitabhängig ist
-      psi(j,i)=0;
+      %psi(j,i)=0;
 
       %numerische Integration
       J(j,i) = trapz(Y,trapz(X,psi.*u_null,2)); %
     endfor  
   endfor
+  %Speichern von J in einer 3D-Matrix für späteren Zugriff
+  Loesung(:,:,t)=J;
+  %--------------------------------------------------------
   n_fig=(1000+t*1000);
   figure(n_fig)
   meshc(x,y,J)
