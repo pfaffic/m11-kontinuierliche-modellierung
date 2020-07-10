@@ -23,6 +23,11 @@
 ## Author: chris <chris@PFAFFMANN-PC>
 ## Created: 2020-07-10
 
+     %retval = [  329, 262,1330,   3,   4;             
+      %          2084,2746,6583,2137,1518;
+       %          561, 644,4195,3867,2385;  
+        %        1197,1001,1543, 636,2203 ];  
+
 function retval = getBevDichteMatrix ()
   
       retval = [  329, 262,1330,   3,   4;             
